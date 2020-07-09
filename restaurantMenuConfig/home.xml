@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+        galleryTitle="Welcome to AAT Lunch Information Site"
+>
+    <image imageURL="images/homePic.jpg" thumbURL="images/homePic.jpg"></image>
+
+</juiceboxgallery>

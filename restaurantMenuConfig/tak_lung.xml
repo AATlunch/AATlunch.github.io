@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+	galleryTitle="德龍快餐"
+>
+  <image imageURL="images/tak_lung1.jpeg" thumbURL="images/tak_lung1.jpeg"></image>
+  <image imageURL="images/tak_lung2.jpeg" thumbURL="images/tak_lung2.jpeg"></image>
+
+</juiceboxgallery>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+        galleryTitle="炮台小廚"
+>
+    <image imageURL="images/pao_toi1.jpeg" thumbURL="images/pao_toi1.jpeg"></image>
+    <image imageURL="images/pao_toi2.jpeg" thumbURL="images/pao_toi2.jpeg"></image>
+    <image imageURL="images/pao_toi3.jpeg" thumbURL="images/pao_toi3.jpeg"></image>
+    <image imageURL="images/pao_toi4.jpeg" thumbURL="images/pao_toi4.jpeg"></image>
+
+</juiceboxgallery>

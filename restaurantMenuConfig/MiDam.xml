@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+        galleryTitle="美談韓國"
+>
+    <image imageURL="images/MiDam1.jpeg" thumbURL="images/MiDam1.jpeg"></image>
+    <image imageURL="images/MiDam2.jpeg" thumbURL="images/MiDam2.jpeg"></image>
+    <image imageURL="images/MiDam3.jpeg" thumbURL="images/MiDam3.jpeg"></image>
+
+</juiceboxgallery>

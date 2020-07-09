@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+        galleryTitle="My Thai"
+>
+    <image imageURL="images/mythai1.jpeg" thumbURL="images/mythai1.jpeg"></image>
+    <image imageURL="images/mythai2.jpeg" thumbURL="images/mythai2.jpeg"></image>
+
+</juiceboxgallery>

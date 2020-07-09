@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery
+        galleryTitle="Outback"
+>
+    <image imageURL="images/outback1.jpeg" thumbURL="images/outback1.jpeg"></image>
+    <image imageURL="images/outback2.jpeg" thumbURL="images/outback2.jpeg"></image>
+    <image imageURL="images/outback3.jpeg" thumbURL="images/outback3.jpeg"></image>
+
+</juiceboxgallery>
