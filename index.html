@@ -1,104 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>AAT Lunch Information Center</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" id="jb-viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0" />
-	<meta name="description" content="AAT Lunch Information Site" />
-	<link rel="stylesheet" href="elements/css/main.css">
-	<link rel="stylesheet" href="elements/css/bootstrap.min.css">
-	<script src="elements/js/jquery-3.2.1.slim.min.js"></script>
-	<script src="elements/js/popper.min.js"></script>
-	<script src="elements/js/bootstrap.min.js"></script>
-	<script src="elements/js/jquery.zoomooz.js"></script>
+    <title>AAT Lunch Information Center</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" id="jb-viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="AAT Lunch Information Site" />
+    <link rel="stylesheet" href="elements/css/main.css">
+    <link rel="stylesheet" href="elements/css/bootstrap.min.css">
+    <link rel="stylesheet" href="elements/css/viewer.css">
+    <script src="elements/js/jquery-1.12.4.min.js"></script>
+    <script src="elements/js/popper.min.js"></script>
+    <script src="elements/js/bootstrap.min.js"></script>
+    <script src="elements/js/viewer.js"></script>
 
-	<!-- Website Icon -->
-	<link rel="apple-touch-icon" sizes="57x57" href="elements/ico/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="elements/ico/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="elements/ico/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="elements/ico/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="elements/ico/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="elements/ico/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="elements/ico/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="elements/ico/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="elements/ico/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="elements/ico/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="elements/ico/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="elements/ico/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="elements/ico/favicon-16x16.png">
-	<link rel="manifest" href="elements/ico/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+    <!-- Website Icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="elements/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="elements/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="elements/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="elements/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="elements/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="elements/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="elements/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="elements/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="elements/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="elements/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="elements/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="elements/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="elements/ico/favicon-16x16.png">
+    <link rel="manifest" href="elements/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-	<!-- OG Details -->
-	<meta property="og:title" content="AAT Lunch Information Center" />
-	<meta property="og:url" content="https://aatlunch.github.io/" />
-	<meta property="og:image" content="https://aatlunch.github.io/elements/ico/ms-icon-310x310.png" />
-	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:width" content="200" />
-	<meta property="og:image:height" content="200" />
-	<meta property="og:image:alt" content="AAT Lunch" />
+    <!-- OG Details -->
+    <meta property="og:title" content="AAT Lunch Information Center" />
+    <meta property="og:url" content="https://aatlunch.github.io/" />
+    <meta property="og:image" content="https://aatlunch.github.io/elements/ico/ms-icon-310x310.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="AAT Lunch" />
 </head>
 <body>
-
-	<!-- Nav Bar -->
-	<nav class="navbar navbar-expand-lg navbar-light" id="lunchNav">
-		<a class="navbar-brand" href="./">AAT Lunch Menu</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarColor03">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=ching_yuet">尚蓮‧越泰</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=lawMakKee">羅麥記</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=MiDam">美談韓國</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=mythai">My Thai</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=ngai_kwok">牛角次男坊</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=outback">Outback</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=pao_toi">炮台小廚</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./?restaurant=tak_lung">德龍快餐</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-
-	<!-- JUICEBOX EMBED -->
-	<script src="jbcore/juicebox.js"></script>
-	<script>
-
-		const urlParams = new URLSearchParams(window.location.search);
-		const restaurantXML = urlParams.get('restaurant') == null ? "home.xml" : urlParams.get('restaurant') + ".xml";
-		console.log("config file loaded: "+restaurantXML);
-
-		new juicebox({
-			containerId: 'juicebox-container',
-			galleryHeight: window.innerHeight - 56,
-			useThumbDots: restaurantXML == "home.xml",
-			configUrl: 'restaurantMenuConfig/' + restaurantXML
-		});
-
-		$( window ).resize(function() {
-			$("#juicebox-container").height(window.innerHeight - 56);
-		});
-
-	</script>
-	<div id="juicebox-container"></div>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="lunchNav">
+        <a class="navbar-brand" href="./">AAT Lunch Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('ching_yuet')">尚蓮‧越泰</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('lawMakKee')">羅麥記</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('MiDam')">美談韓國</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('mythai')">My Thai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('ngai_kwok')">牛角次男坊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('outback')">Outback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('pao_toi')">炮台小廚</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:loadViewer('tak_lung')">德龍快餐</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="card mx-auto" id="welcomeCard">
+        <div class="card-body">
+            <h5 class="card-title">Welcome to AAT Lunch Information Center</h5>
+            <p class="card-text">Please select the Restaurant in the Navigation bar!</p>
+        </div>
+    </div>
 </body>
+<script>
+    function loadViewer(configFile){
+        $.getJSON("restaurantMenuConfig/" + configFile + ".json", function(json) {
+            console.log(json);
+            const ul = document.createElement("ul");
+            const li = document.createElement("li");
+            $.each(json.images, function( index, value ) {
+                const image = new Image();
+                image.src = value;
+                li.appendChild (image);
+            });
+            ul.appendChild (li);
+
+            const viewer = new Viewer(ul, {
+                title: 0,
+                hidden: function () {
+                    viewer.destroy();
+                },
+            });
+            viewer.show();
+        });
+    }
+    
+</script>
 </html>
