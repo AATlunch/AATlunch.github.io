@@ -106,6 +106,13 @@
             viewer.show();
         });
     }
-    
+
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	}
+
+    $( document ).ready(function() {
+        if(isMobileDevice()) $('button.navbar-toggler').click();
+    });
 </script>
 </html>
