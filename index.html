@@ -112,11 +112,11 @@
                 zIndexInline: 1,
                 hidden: function () {
                     viewer.destroy();
-                    $('#whatsappButton').hide();
+                    if(isMobileDevice()) $('#whatsappButton').hide();
                 },
             });
             viewer.show();
-            $('#whatsappButton').show();
+            if(isMobileDevice()) $('#whatsappButton').show();
         });
     }
 
