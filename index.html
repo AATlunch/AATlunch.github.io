@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="elements/css/main.css">
     <link rel="stylesheet" href="elements/css/bootstrap.min.css">
     <link rel="stylesheet" href="elements/css/viewer.css">
+    <link rel="stylesheet" href="elements/css/font-awesome.min.css">
     <script src="elements/js/jquery-1.12.4.min.js"></script>
     <script src="elements/js/popper.min.js"></script>
     <script src="elements/js/bootstrap.min.js"></script>
@@ -86,6 +87,11 @@
             <p class="card-text">Please select the Restaurant in the Navigation bar!</p>
         </div>
     </div>
+    <div class="col-3" id="whatsappButton">
+        <button type="button" class="btn btn-success btn-circle btn-xl" onclick="window.location.href='whatsapp://send?'">
+            <i class="fa fa-whatsapp"></i>
+        </button>
+    </div>
 </body>
 <script>
     function loadViewer(configFile){
@@ -102,11 +108,15 @@
 
             const viewer = new Viewer(ul, {
                 title: 0,
+                zIndex: 10,
+                zIndexInline: 1,
                 hidden: function () {
                     viewer.destroy();
+                    $('#whatsappButton').hide();
                 },
             });
             viewer.show();
+            $('#whatsappButton').show();
         });
     }
 

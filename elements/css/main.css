@@ -18,6 +18,31 @@ nav#lunchNav {
     text-align: center;
 }
 
+#whatsappButton {
+    z-index: 999;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    display: none;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    font-size: 38px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
 @media (max-width: 768px) {
     body {
         background-position: 70% 50%;
