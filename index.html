@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" id="jb-viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0" />
     <meta name="description" content="AAT Lunch Information Site" />
+
+    <!-- Style and JS Library -->
     <link rel="stylesheet" href="elements/css/main.css">
     <link rel="stylesheet" href="elements/css/bootstrap.min.css">
     <link rel="stylesheet" href="elements/css/viewer.css">
@@ -51,17 +53,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('pao_toi')">炮台小廚</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-book" aria-hidden="true"></i> 外賣紙
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="javascript:loadViewer('pao_toi')">炮台小廚</a>
+                        <a class="dropdown-item" href="javascript:loadViewer('mythai')">My Thai</a>
+                        <a class="dropdown-item" href="javascript:loadViewer('cpcs')">國泰航膳</a>
+                        <a class="dropdown-item" href="javascript:loadViewer('cheesePizza')">芝味派對餐</a>
+                        <a class="dropdown-item" href="javascript:loadViewer('donSingLau')">東昇樓酒家</a>
+                        <a class="dropdown-item" href="javascript:loadViewer('eatAtGate')">食在佳美</a>
+                        <a class="dropdown-item" href="javascript:loadViewer('newWuaDuo')">新華都</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:loadViewer('tak_lung')">德龍快餐</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('mythai')">My Thai</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('cpcs')">國泰航膳</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:loadViewer('ching_yuet')">尚蓮 ‧ 越泰</a>
@@ -84,12 +91,16 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Home Screen Welcome Words -->
     <div class="card mx-auto" id="welcomeCard">
         <div class="card-body">
             <h5 class="card-title">Welcome to AAT Lunch Information Center</h5>
             <p class="card-text">Please select the Restaurant in the Navigation bar!</p>
         </div>
     </div>
+
+    <!-- WhatsApp Button for Mobile -->
     <div class="col-3" id="whatsappButton">
         <button type="button" class="btn btn-success btn-circle btn-xl" onclick="window.location.href='whatsapp://send?'">
             <i class="fa fa-whatsapp"></i>
