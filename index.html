@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>AAT Lunch Information Center</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" id="jb-viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0" />
     <meta name="description" content="AAT Lunch Information Site" />
 
@@ -52,43 +52,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-book" aria-hidden="true"></i> 外賣紙
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:loadViewer('pao_toi')">炮台小廚</a>
-                        <a class="dropdown-item" href="javascript:loadViewer('mythai')">My Thai</a>
-                        <a class="dropdown-item" href="javascript:loadViewer('cpcs')">國泰航膳</a>
-                        <a class="dropdown-item" href="javascript:loadViewer('cheesePizza')">芝味派對餐</a>
-                        <a class="dropdown-item" href="javascript:loadViewer('donSingLau')">東昇樓酒家</a>
-                        <a class="dropdown-item" href="javascript:loadViewer('eatAtGate')">食在佳美</a>
-                        <a class="dropdown-item" href="javascript:loadViewer('newWuaDuo')">新華都</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('tak_lung')">德龍快餐</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('ching_yuet')">尚蓮 ‧ 越泰</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('lawMakKee')">羅麥記</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('MiDam')">美談韓國</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('ngai_kwok')">牛角次男坊</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('outback')">Outback</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:loadViewer('wor_man')">饗 ‧ 和民</a>
-                </li>
-            </ul>
+            <ul class="navbar-nav mr-auto" id="NavBarListItem"></ul>
         </div>
     </nav>
 
@@ -108,9 +72,60 @@
     </div>
 </body>
 <script>
-    function loadViewer(configFile){
-        $.getJSON("restaurantMenuConfig/" + configFile + ".json", function(json) {
+    function loadNavBarListItem()
+    {
+        $.getJSON("restaurantMenuConfig/navigationBar.json", function(json) {
+            const ul = document.createElement("ul");
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            const div = document.createElement("div");
+
+            li.setAttribute("class", "nav-item dropdown");
+            a.setAttribute("class", "nav-link dropdown-toggle");
+            a.setAttribute("href", "#");
+            a.setAttribute("id", "navbarDropdown");
+            a.setAttribute("role", "button");
+            a.setAttribute("data-toggle", "dropdown");
+            a.setAttribute("aria-haspopup", "true");
+            a.setAttribute("aria-expanded", "false");
+            a.innerHTML = "<i class=\"fa fa-book\" aria-hidden=\"true\"></i> 外賣紙";
+            div.setAttribute("class", "dropdown-menu");
+            div.setAttribute("aria-labelledby", "navbarDropdown");
+
+            $.each(json.takeAwayMenu, function( index, value ) {
+
+                //create a hyperlink element and append into the list
+                const newA = document.createElement('a');
+                newA.setAttribute('class', "dropdown-item");
+                newA.setAttribute('href', "javascript:loadViewer('" + value.resKey + "')");
+                newA.innerText = value.resValue;
+                div.appendChild (newA);
+            });
+            li.appendChild(a);
+            li.appendChild(div);
+            ul.appendChild (li);
+
+            $.each(json.eatInMenu, function( index, value ) {
+
+                //create a hyperlink element and append into the list
+                const li = document.createElement("li");
+                const newA = document.createElement('a');
+                li.setAttribute('class', "nav-item");
+                newA.setAttribute('class', "nav-link");
+                newA.setAttribute('href', "javascript:loadViewer('" + value.resKey + "')");
+                newA.innerText = value.resValue;
+                li.appendChild(newA);
+                ul.appendChild (li);
+            });
+
             console.log(json);
+            $('ul#NavBarListItem').html(ul.innerHTML);
+        });
+    }
+
+    function loadViewer(configFile)
+    {
+        $.getJSON("restaurantMenuConfig/" + configFile + ".json", function(json) {
             const ul = document.createElement("ul");
             const li = document.createElement("li");
             $.each(json.images, function( index, value ) {
@@ -119,6 +134,7 @@
                 li.appendChild (image);
             });
             ul.appendChild (li);
+            console.log(json);
 
             const viewer = new Viewer(ul, {
                 title: 0,
@@ -134,11 +150,15 @@
         });
     }
 
-	function isMobileDevice() {
+	function isMobileDevice()
+    {
 		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 	}
 
-    $( document ).ready(function() {
+	//after all DOM element ready
+    $( document ).ready(function()
+    {
+        loadNavBarListItem();
         if(isMobileDevice()) $('button.navbar-toggler').click();
     });
 </script>

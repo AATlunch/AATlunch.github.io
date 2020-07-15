@@ -1,0 +1,62 @@
+{
+  "takeAwayMenu": [
+    {
+      "resKey": "pao_toi",
+      "resValue": "炮台小廚"
+    },
+    {
+      "resKey": "mythai",
+      "resValue": "My Thai"
+    },
+    {
+      "resKey": "cpcs",
+      "resValue": "國泰航膳"
+    },
+    {
+      "resKey": "cheesePizza",
+      "resValue": "芝味派對餐"
+    },
+    {
+      "resKey": "donSingLau",
+      "resValue": "東昇樓酒家"
+    },
+    {
+      "resKey": "eatAtGate",
+      "resValue": "食在佳美"
+    },
+    {
+      "resKey": "newWuaDuo",
+      "resValue": "新華都"
+    }
+  ],
+  "eatInMenu": [
+    {
+      "resKey": "tak_lung",
+      "resValue": "德龍快餐"
+    },
+    {
+      "resKey": "ching_yuet",
+      "resValue": "尚蓮 ‧ 越泰"
+    },
+    {
+      "resKey": "lawMakKee",
+      "resValue": "羅麥記"
+    },
+    {
+      "resKey": "MiDam",
+      "resValue": "美談韓國"
+    },
+    {
+      "resKey": "ngai_kwok",
+      "resValue": "牛角次男坊"
+    },
+    {
+      "resKey": "outback",
+      "resValue": "Outback"
+    },
+    {
+      "resKey": "wor_man",
+      "resValue": "饗 ‧ 和民"
+    }
+  ]
+}
